@@ -1,7 +1,7 @@
 #Importamos Flask y lo que utilizamos de flask 
 from flask import Flask, render_template, request, redirect
 
-# Importamos la app
+#Importamos la app
 from flask_app import app
 
 # Importamos los modelos que usaremos --- el ultimo User va con mayuscula porque es la clase
@@ -25,7 +25,7 @@ def create():
 def delete(id):
     formulario = {"id": id} #diccionario que lo ponemos como nombre de variable 
     User.borra(formulario)
-    return rendirect('/ ')
+    return redirect('/ ')
 
 @app.route('/edit/<int:id>')
 def edit(id):
